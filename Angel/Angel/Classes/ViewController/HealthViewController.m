@@ -341,7 +341,6 @@
         [sender setImage:image1 forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     }else if (sender.tag == 102){
-         NSLog(@"woshi 102");
         UIButton *manbtn = [self.view viewWithTag:100];
         UIButton *btn = [self.view viewWithTag:101];
         UIImage *image = [UIImage imageNamed:@"yes.png"];
@@ -349,14 +348,12 @@
         [manbtn setImage:image1 forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     }else if (sender.tag == 103){
-        NSLog(@"woshi 103");
         UIButton *manbtn = [self.view viewWithTag:100];
         UIButton *btn = [self.view viewWithTag:101];
         UIImage *image = [UIImage imageNamed:@"yes.png"];
         UIImage *image1 = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [btn setImage:image1 forState:UIControlStateNormal];
         [manbtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        
     }
 }
 
