@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonthViewController">
+            <connections>
+                <outlet property="bottomImageView" destination="jdb-dg-p7W" id="Zl2-q0-1qR"/>
+                <outlet property="middleImageView" destination="Brb-FB-3Zs" id="tXE-Du-ViU"/>
+                <outlet property="topImageView" destination="PUg-yp-7Hd" id="cEZ-Hn-kQ7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高压" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bL-qj-h7K">
+                    <rect key="frame" x="38" y="18" width="40" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Glu-on-B9g"/>
+                        <constraint firstAttribute="height" constant="20" id="ie5-PD-zLI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心率" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBT-Ly-DQG">
+                    <rect key="frame" x="38" y="298" width="40" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="AbQ-Hu-kaN"/>
+                        <constraint firstAttribute="height" constant="20" id="GQg-UR-PvF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="血压的折线图.png" translatesAutoresizingMaskIntoConstraints="NO" id="PUg-yp-7Hd">
+                    <rect key="frame" x="38" y="48" width="524" height="100"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="p2V-DR-lfm"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="血压的折线图.png" translatesAutoresizingMaskIntoConstraints="NO" id="Brb-FB-3Zs">
+                    <rect key="frame" x="38" y="188" width="524" height="100"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="G7k-2V-Tez"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="血压的折线图.png" translatesAutoresizingMaskIntoConstraints="NO" id="jdb-dg-p7W">
+                    <rect key="frame" x="38" y="328" width="524" height="100"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="NkB-Vy-KyX"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这个月跟上个月比较, 好很多哦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ka-Ch-tnK">
+                    <rect key="frame" x="38" y="438" width="524" height="144"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="低压" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-Pz-MNk">
+                    <rect key="frame" x="30" y="158" width="40" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ctO-gS-aUP"/>
+                        <constraint firstAttribute="width" constant="40" id="eMW-JT-LlV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZBT-Ly-DQG" firstAttribute="top" secondItem="Brb-FB-3Zs" secondAttribute="bottom" constant="10" id="85V-aO-Snx"/>
+                <constraint firstItem="1ka-Ch-tnK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="30" id="8ic-RM-hdj"/>
+                <constraint firstAttribute="bottomMargin" secondItem="1ka-Ch-tnK" secondAttribute="bottom" constant="10" id="A3S-8r-TNy"/>
+                <constraint firstItem="Brb-FB-3Zs" firstAttribute="top" secondItem="hNi-Pz-MNk" secondAttribute="bottom" constant="10" id="C65-eq-FVn"/>
+                <constraint firstItem="0bL-qj-h7K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="30" id="DVR-ZF-SmJ"/>
+                <constraint firstItem="jdb-dg-p7W" firstAttribute="top" secondItem="ZBT-Ly-DQG" secondAttribute="bottom" constant="10" id="LWn-Nx-GN9"/>
+                <constraint firstItem="hNi-Pz-MNk" firstAttribute="top" secondItem="PUg-yp-7Hd" secondAttribute="bottom" constant="10" id="QYE-Cj-2tN"/>
+                <constraint firstItem="1ka-Ch-tnK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UX3-fq-z5Z"/>
+                <constraint firstItem="ZBT-Ly-DQG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="30" id="aaa-b2-bqQ"/>
+                <constraint firstItem="PUg-yp-7Hd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bx4-dK-ubH"/>
+                <constraint firstItem="PUg-yp-7Hd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="30" id="dM6-Jm-0Cw"/>
+                <constraint firstItem="PUg-yp-7Hd" firstAttribute="top" secondItem="0bL-qj-h7K" secondAttribute="bottom" constant="10" id="dbU-wr-epU"/>
+                <constraint firstItem="0bL-qj-h7K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="10" id="iRE-X8-OyQ"/>
+                <constraint firstItem="jdb-dg-p7W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="30" id="mbh-EA-0lN"/>
+                <constraint firstItem="1ka-Ch-tnK" firstAttribute="top" secondItem="jdb-dg-p7W" secondAttribute="bottom" constant="10" id="mtt-l8-Cgi"/>
+                <constraint firstItem="jdb-dg-p7W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oPe-Qg-lNv"/>
+                <constraint firstItem="hNi-Pz-MNk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="riN-Ml-6DP"/>
+                <constraint firstItem="Brb-FB-3Zs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="30" id="xvG-yJ-XMs"/>
+                <constraint firstItem="Brb-FB-3Zs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ycW-Bx-LMv"/>
+            </constraints>
+            <point key="canvasLocation" x="193" y="240"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="血压的折线图.png" width="248" height="100"/>
+    </resources>
+</document>

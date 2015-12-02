@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="35" id="KGk-i7-Jjw" customClass="SelectTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="34"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_left" translatesAutoresizingMaskIntoConstraints="NO" id="xGA-FM-No3">
+                        <rect key="frame" x="149" y="10" width="8" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="f0T-zt-qfL"/>
+                            <constraint firstAttribute="height" constant="14" id="m72-YV-Ynu"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3g-oO-UO8">
+                        <rect key="frame" x="81" y="0.0" width="86" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="86" id="cZQ-TA-qpc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="  科室选择"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精选问答" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ5-y9-034">
+                        <rect key="frame" x="0.0" y="-4" width="86" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="86" id="AEe-GQ-p01"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="g3g-oO-UO8" secondAttribute="bottom" id="6RO-sE-BSs"/>
+                    <constraint firstItem="xGA-FM-No3" firstAttribute="leading" secondItem="NZ5-y9-034" secondAttribute="trailing" constant="63" id="ami-ow-XvW"/>
+                    <constraint firstItem="NZ5-y9-034" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-12" id="ank-cV-fJf"/>
+                    <constraint firstItem="xGA-FM-No3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fMG-fG-CCF"/>
+                    <constraint firstItem="NZ5-y9-034" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fY5-1o-aaW"/>
+                    <constraint firstItem="NZ5-y9-034" firstAttribute="centerY" secondItem="xGA-FM-No3" secondAttribute="centerY" id="fwQ-Wz-tdm"/>
+                    <constraint firstItem="NZ5-y9-034" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="g97-CQ-ShR"/>
+                    <constraint firstItem="g3g-oO-UO8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lPS-Hy-j7S"/>
+                    <constraint firstItem="g3g-oO-UO8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="73" id="pAI-iq-xk0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectBtn" destination="g3g-oO-UO8" id="UkC-TA-Nma"/>
+            </connections>
+            <point key="canvasLocation" x="341.5" y="353.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="select_left" width="10" height="16"/>
+    </resources>
+</document>
