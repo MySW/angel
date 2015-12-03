@@ -82,6 +82,16 @@
 		AB85CD5E1C0223D0001D7368 /* UserSpeakTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB85CD5C1C0223D0001D7368 /* UserSpeakTableViewCell.xib */; };
 		AB85CD621C0226B6001D7368 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB85CD601C0226B6001D7368 /* UserTableViewCell.m */; };
 		AB85CD631C0226B6001D7368 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB85CD611C0226B6001D7368 /* UserTableViewCell.xib */; };
+		AB8A442F1C1063A90065AEE7 /* AddressChoicePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8A44271C1063A90065AEE7 /* AddressChoicePickerView.m */; };
+		AB8A44301C1063A90065AEE7 /* AddressChoicePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A44281C1063A90065AEE7 /* AddressChoicePickerView.xib */; };
+		AB8A44311C1063A90065AEE7 /* AreaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8A442A1C1063A90065AEE7 /* AreaObject.m */; };
+		AB8A44321C1063A90065AEE7 /* MyPickerSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8A442C1C1063A90065AEE7 /* MyPickerSelectView.m */; };
+		AB8A44331C1063A90065AEE7 /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8A442E1C1063A90065AEE7 /* ZHPickView.m */; };
+		AB8A44371C1063F60065AEE7 /* DropDownTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8A44351C1063F60065AEE7 /* DropDownTableViewCell.m */; };
+		AB8A44381C1063F60065AEE7 /* DropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8A44361C1063F60065AEE7 /* DropDownTableViewCell.xib */; };
+		AB8A443B1C1064310065AEE7 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8A443A1C1064310065AEE7 /* HealthViewController.m */; };
+		AB8A443D1C1066140065AEE7 /* ZHpickView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8A443C1C1066140065AEE7 /* ZHpickView-Info.plist */; };
+		AB8A443F1C1067110065AEE7 /* AreaPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8A443E1C1067110065AEE7 /* AreaPlist.plist */; };
 		AB8B38C81BFC122B0053A84D /* MyDocterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B38C61BFC122B0053A84D /* MyDocterTableViewCell.m */; };
 		AB8B38C91BFC122B0053A84D /* MyDocterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8B38C71BFC122B0053A84D /* MyDocterTableViewCell.xib */; };
 		AB8B38CD1BFC19710053A84D /* AskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B38CB1BFC19710053A84D /* AskTableViewCell.m */; };
@@ -221,7 +231,6 @@
 		ABF2DD381C0DC6FE0039D864 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD361C0DC6FE0039D864 /* QuestionTableViewCell.xib */; };
 		ABF2DD3C1C0DC74C0039D864 /* SexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD3A1C0DC74C0039D864 /* SexTableViewCell.m */; };
 		ABF2DD3D1C0DC74C0039D864 /* SexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD3B1C0DC74C0039D864 /* SexTableViewCell.xib */; };
-		ABF2DD401C0DC7BB0039D864 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD3F1C0DC7BB0039D864 /* HealthViewController.m */; };
 		ABF2DD441C0DC7E60039D864 /* OtherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD421C0DC7E60039D864 /* OtherTableViewCell.m */; };
 		ABF2DD451C0DC7E60039D864 /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD431C0DC7E60039D864 /* OtherTableViewCell.xib */; };
 		ABF2DD521C0DCA250039D864 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD471C0DCA250039D864 /* DayViewController.m */; };
@@ -375,6 +384,22 @@
 		AB85CD5F1C0226B6001D7368 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		AB85CD601C0226B6001D7368 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		AB85CD611C0226B6001D7368 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		AB8A44261C1063A90065AEE7 /* AddressChoicePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressChoicePickerView.h; sourceTree = "<group>"; };
+		AB8A44271C1063A90065AEE7 /* AddressChoicePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressChoicePickerView.m; sourceTree = "<group>"; };
+		AB8A44281C1063A90065AEE7 /* AddressChoicePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressChoicePickerView.xib; sourceTree = "<group>"; };
+		AB8A44291C1063A90065AEE7 /* AreaObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaObject.h; sourceTree = "<group>"; };
+		AB8A442A1C1063A90065AEE7 /* AreaObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaObject.m; sourceTree = "<group>"; };
+		AB8A442B1C1063A90065AEE7 /* MyPickerSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickerSelectView.h; sourceTree = "<group>"; };
+		AB8A442C1C1063A90065AEE7 /* MyPickerSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickerSelectView.m; sourceTree = "<group>"; };
+		AB8A442D1C1063A90065AEE7 /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
+		AB8A442E1C1063A90065AEE7 /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
+		AB8A44341C1063F60065AEE7 /* DropDownTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownTableViewCell.h; sourceTree = "<group>"; };
+		AB8A44351C1063F60065AEE7 /* DropDownTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownTableViewCell.m; sourceTree = "<group>"; };
+		AB8A44361C1063F60065AEE7 /* DropDownTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownTableViewCell.xib; sourceTree = "<group>"; };
+		AB8A44391C1064310065AEE7 /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
+		AB8A443A1C1064310065AEE7 /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
+		AB8A443C1C1066140065AEE7 /* ZHpickView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZHpickView-Info.plist"; sourceTree = "<group>"; };
+		AB8A443E1C1067110065AEE7 /* AreaPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AreaPlist.plist; sourceTree = "<group>"; };
 		AB8B38C51BFC122B0053A84D /* MyDocterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocterTableViewCell.h; sourceTree = "<group>"; };
 		AB8B38C61BFC122B0053A84D /* MyDocterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocterTableViewCell.m; sourceTree = "<group>"; };
 		AB8B38C71BFC122B0053A84D /* MyDocterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDocterTableViewCell.xib; sourceTree = "<group>"; };
@@ -537,8 +562,6 @@
 		ABF2DD391C0DC74C0039D864 /* SexTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexTableViewCell.h; sourceTree = "<group>"; };
 		ABF2DD3A1C0DC74C0039D864 /* SexTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexTableViewCell.m; sourceTree = "<group>"; };
 		ABF2DD3B1C0DC74C0039D864 /* SexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SexTableViewCell.xib; sourceTree = "<group>"; };
-		ABF2DD3E1C0DC7BB0039D864 /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
-		ABF2DD3F1C0DC7BB0039D864 /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		ABF2DD411C0DC7E60039D864 /* OtherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTableViewCell.h; sourceTree = "<group>"; };
 		ABF2DD421C0DC7E60039D864 /* OtherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTableViewCell.m; sourceTree = "<group>"; };
 		ABF2DD431C0DC7E60039D864 /* OtherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
@@ -706,6 +729,7 @@
 				ABF588321C0705B500ACF127 /* questLine@2x.png */,
 				AB7F69301BFB17F50050A541 /* LaunchScreen.storyboard */,
 				AB7F69331BFB17F50050A541 /* Info.plist */,
+				AB8A443C1C1066140065AEE7 /* ZHpickView-Info.plist */,
 				AB7F69221BFB17F50050A541 /* Supporting Files */,
 			);
 			path = Angel;
@@ -746,6 +770,15 @@
 				AB7F69561BFB18120050A541 /* Custom */,
 				ABB1F05F1C0C46D700EADD14 /* CustomButton.h */,
 				ABB1F0601C0C46D700EADD14 /* CustomButton.m */,
+				AB8A44261C1063A90065AEE7 /* AddressChoicePickerView.h */,
+				AB8A44271C1063A90065AEE7 /* AddressChoicePickerView.m */,
+				AB8A44281C1063A90065AEE7 /* AddressChoicePickerView.xib */,
+				AB8A44291C1063A90065AEE7 /* AreaObject.h */,
+				AB8A442A1C1063A90065AEE7 /* AreaObject.m */,
+				AB8A442B1C1063A90065AEE7 /* MyPickerSelectView.h */,
+				AB8A442C1C1063A90065AEE7 /* MyPickerSelectView.m */,
+				AB8A442D1C1063A90065AEE7 /* ZHPickView.h */,
+				AB8A442E1C1063A90065AEE7 /* ZHPickView.m */,
 				AB7F69571BFB18120050A541 /* Manager */,
 				AB7F69581BFB18120050A541 /* Model */,
 				AB7F69591BFB18120050A541 /* Request */,
@@ -993,6 +1026,7 @@
 		ABE3E9BF1BFEFD1E007B9521 /* HOME */ = {
 			isa = PBXGroup;
 			children = (
+				AB8A443E1C1067110065AEE7 /* AreaPlist.plist */,
 				ABEAA1431C07E9F600E09F8A /* home */,
 				ABEAA1421C07E4D700E09F8A /* HomeDocter */,
 				AB26915F1C00CCBE0079ED5C /* FindDocter */,
@@ -1009,8 +1043,8 @@
 				ABB1F0821C0C608C00EADD14 /* HealthTableViewCell.h */,
 				ABB1F0831C0C608C00EADD14 /* HealthTableViewCell.m */,
 				ABB1F0841C0C608C00EADD14 /* HealthTableViewCell.xib */,
-				ABF2DD3E1C0DC7BB0039D864 /* HealthViewController.h */,
-				ABF2DD3F1C0DC7BB0039D864 /* HealthViewController.m */,
+				AB8A44391C1064310065AEE7 /* HealthViewController.h */,
+				AB8A443A1C1064310065AEE7 /* HealthViewController.m */,
 				ABB1F0871C0C608C00EADD14 /* PersonTableViewController.h */,
 				ABB1F0881C0C608C00EADD14 /* PersonTableViewController.m */,
 				ABB1F0891C0C608C00EADD14 /* SettingViewController.h */,
@@ -1018,6 +1052,9 @@
 				ABF2DD391C0DC74C0039D864 /* SexTableViewCell.h */,
 				ABF2DD3A1C0DC74C0039D864 /* SexTableViewCell.m */,
 				ABF2DD3B1C0DC74C0039D864 /* SexTableViewCell.xib */,
+				AB8A44341C1063F60065AEE7 /* DropDownTableViewCell.h */,
+				AB8A44351C1063F60065AEE7 /* DropDownTableViewCell.m */,
+				AB8A44361C1063F60065AEE7 /* DropDownTableViewCell.xib */,
 			);
 			name = PERSON;
 			sourceTree = "<group>";
@@ -1263,10 +1300,12 @@
 				AB3D98D11C08613600CEFF10 /* 小儿科@2x.png in Resources */,
 				AB3D98E31C08613600CEFF10 /* 向右箭头@2x.png in Resources */,
 				AB3D98D21C08613600CEFF10 /* 耳鼻咽喉头科@2x.png in Resources */,
+				AB8A443F1C1067110065AEE7 /* AreaPlist.plist in Resources */,
 				ABC9A47E1BFB6089008A6D69 /* QuestTableViewCell.xib in Resources */,
 				ABCEFF251C02FED700D94D16 /* 圆角矩形-1@2x.png in Resources */,
 				AB85CD631C0226B6001D7368 /* UserTableViewCell.xib in Resources */,
 				ABE5990E1C05352E00A03A74 /* 血糖仪@2x.png in Resources */,
+				AB8A44301C1063A90065AEE7 /* AddressChoicePickerView.xib in Resources */,
 				ABB1F0811C0C5F8900EADD14 /* hongxing@2x.png in Resources */,
 				ABB1F0A21C0C634F00EADD14 /* history@2x.png in Resources */,
 				AB7F69321BFB17F50050A541 /* LaunchScreen.storyboard in Resources */,
@@ -1290,6 +1329,7 @@
 				ABD40BA31C00F37A0021FE8A /* keshi6@2x.png in Resources */,
 				ABF2DD551C0DCA250039D864 /* MonthViewController.xib in Resources */,
 				AB85CD5E1C0223D0001D7368 /* UserSpeakTableViewCell.xib in Resources */,
+				AB8A443D1C1066140065AEE7 /* ZHpickView-Info.plist in Resources */,
 				AB3D98E91C08613600CEFF10 /* 肿瘤@2x.png in Resources */,
 				ABD40B971C00F37A0021FE8A /* keshi17@2x.png in Resources */,
 				ABCA1C6D1C0086EB00BD6B4B /* xxtz@2x.png in Resources */,
@@ -1380,6 +1420,7 @@
 				ABD40B961C00F37A0021FE8A /* keshi16@2x.png in Resources */,
 				ABD40BA11C00F37A0021FE8A /* keshi4@2x.png in Resources */,
 				ABF2DD381C0DC6FE0039D864 /* QuestionTableViewCell.xib in Resources */,
+				AB8A44381C1063F60065AEE7 /* DropDownTableViewCell.xib in Resources */,
 				ABEA17B71C06AFB200B6E963 /* 档案@2x.png in Resources */,
 				ABCA1C6C1C0086EB00BD6B4B /* xgmm@2x.png in Resources */,
 				ABEA17D21C06AFB200B6E963 /* 设置@2x.png in Resources */,
@@ -1447,10 +1488,10 @@
 				ABB1F0911C0C608C00EADD14 /* PersonTableViewController.m in Sources */,
 				AB85CD5D1C0223D0001D7368 /* UserSpeakTableViewCell.m in Sources */,
 				AB7F69761BFB2C240050A541 /* TADotView.m in Sources */,
-				ABF2DD401C0DC7BB0039D864 /* HealthViewController.m in Sources */,
 				ABB1F07A1C0C5DDB00EADD14 /* BloodSugerViewController.m in Sources */,
 				ABF0CF551C01E281002569B7 /* DocterDateTableViewCell.m in Sources */,
 				AB7269111C095AD10026785F /* PublishViewController.m in Sources */,
+				AB8A44311C1063A90065AEE7 /* AreaObject.m in Sources */,
 				AB7F69741BFB2C240050A541 /* TAAbstractDotView.m in Sources */,
 				AB7F699E1BFB2C8F0050A541 /* NSData+ImageContentType.m in Sources */,
 				AB7F69751BFB2C240050A541 /* TAAnimatedDotView.m in Sources */,
@@ -1475,6 +1516,8 @@
 				ABE3E9CC1BFF0015007B9521 /* FindTableViewCell.m in Sources */,
 				AB7F69AB1BFB2C8F0050A541 /* UIImageView+WebCache.m in Sources */,
 				AB7F69771BFB2C240050A541 /* TAPageControl.m in Sources */,
+				AB8A442F1C1063A90065AEE7 /* AddressChoicePickerView.m in Sources */,
+				AB8A44371C1063F60065AEE7 /* DropDownTableViewCell.m in Sources */,
 				ABF2DD3C1C0DC74C0039D864 /* SexTableViewCell.m in Sources */,
 				AB72690B1C095A8D0026785F /* VisitViewController.m in Sources */,
 				AB7F69AC1BFB2C8F0050A541 /* UIView+WebCacheOperation.m in Sources */,
@@ -1491,6 +1534,7 @@
 				ABB1F0921C0C608C00EADD14 /* SettingViewController.m in Sources */,
 				AB7F69241BFB17F50050A541 /* main.m in Sources */,
 				AB7F69A21BFB2C8F0050A541 /* SDWebImageDownloader.m in Sources */,
+				AB8A443B1C1064310065AEE7 /* HealthViewController.m in Sources */,
 				AB7F69AA1BFB2C8F0050A541 /* UIImageView+HighlightedWebCache.m in Sources */,
 				AB7F69A11BFB2C8F0050A541 /* SDWebImageDecoder.m in Sources */,
 				ABE3E9C81BFEFEA0007B9521 /* SearchTableViewController.m in Sources */,
@@ -1501,6 +1545,8 @@
 				AB2691531C009BB90079ED5C /* DocterDetailViewController.m in Sources */,
 				AB7269081C095A540026785F /* ConsultViewController.m in Sources */,
 				AB7F69A41BFB2C8F0050A541 /* SDWebImageManager.m in Sources */,
+				AB8A44321C1063A90065AEE7 /* MyPickerSelectView.m in Sources */,
+				AB8A44331C1063A90065AEE7 /* ZHPickView.m in Sources */,
 				AB7F69781BFB2C240050A541 /* SDCollectionViewCell.m in Sources */,
 				ABCEFEFD1C02FC4200D94D16 /* CommondTableViewController.m in Sources */,
 				AB7F69791BFB2C240050A541 /* SDCycleScrollView.m in Sources */,

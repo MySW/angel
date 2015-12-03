@@ -9,6 +9,10 @@
 #import "HealthViewController.h"
 #import "HealthTableViewCell.h"
 #import "SexTableViewCell.h"
+#import "DropDownTableViewCell.h"
+#import "MyPickerSelectView.h"
+#import "AddressChoicePickerView.h"
+#include "ZHPickView.h"
 
 #define NAVHEIGHT CGRectGetMaxY(self.navigationController.navigationBar.frame)
 #define WIDTH [UIScreen mainScreen].bounds.size.width
@@ -19,14 +23,19 @@
 #define RANGY 10
 #define TABLEVIEW
 
-@interface HealthViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HealthViewController ()<UITableViewDelegate, UITableViewDataSource,ZHPickViewDelegate>
 {
     NSInteger flagOne;
     NSArray *numArr;
     NSMutableArray *cellDataArr;
     NSInteger manFlag;
     NSInteger womenFlag;
-
+    NSString *fileString;
+    NSString *specialString;
+    NSString *countryString;
+    NSInteger selectFlag;
+    MyPickerSelectView *myStlyPickerView;
+    
 }
 @property (nonatomic, strong) NSArray *leftData;
 @property (nonatomic, strong) NSArray *rightData;
@@ -34,9 +43,16 @@
 @property (nonatomic, strong) NSMutableArray *reLoadLeftData;
 @property (nonatomic, strong) NSMutableArray *reLoadRightData;
 @property (nonatomic, strong) UIButton *NoPowerBtn;
+@property(nonatomic,strong)ZHPickView *pickview;
 
+@property (nonatomic, strong) NSArray *identityArr;
+@property (nonatomic, strong) NSArray *specialArr;
+@property (nonatomic, strong) NSArray *countryArr;
+@property (nonatomic, strong) NSArray *peopleArr;
+@property (nonatomic, strong) NSArray *houseArr;
 @property (nonatomic, strong) HealthTableViewCell *healthCell;
 @property (nonatomic, strong) SexTableViewCell *sexCell;
+@property (nonatomic, strong) DropDownTableViewCell * dropCell;
 @end
 
 @implementation HealthViewController
@@ -53,10 +69,16 @@
 - (void)setupData
 {
     cellDataArr = [NSMutableArray array];
-    numArr = @[@"12", @"1", @"5", @"4", @"4", @"2", @"1", @"1", @"2"];
+    self.identityArr = @[@"请选择证件类型",@"二代身份证", @"残疾证", @"军官证", @"学生证", @"记者证", @"港澳台人员", @"其他"];
+    self.specialArr = @[@"请选择特殊类型",@"无", @"伤残人士", @"低保人员", @"外国友人", @"其他"];
+    self.peopleArr = @[@"请选择政治面貌", @"党员", @"群众", @"民主党派", @"共青团员", @"其他"];
+    self.countryArr = @[@"请选择国籍",@"中国", @"美国", @"英国", @"法国", @"日本", @"澳大利亚", @"俄罗斯", @"意大利", @"印度", @"伊拉克", @"韩国", @"其他"];
+    self.houseArr = @[@"请选择居住类型",@"省内城区", @"省外城区", @"省内市辖镇", @"省外市辖镇", @"省内县辖镇", @"省外县辖镇", @"省内乡村", @"省外乡村", @"其他"];
+    
+    numArr = @[self.identityArr, self.specialArr, self.peopleArr, self.countryArr, self.houseArr];
     self.leftData = @[@"基本信息", @"健康状况", @"生活环境", @"行为习惯", @"既往史", @"健康分类", @"当前健康指标", @"主要健康问题", @"档案管理信息"];
     NSArray *healthArr = @[@"健康状况:"];
-    NSArray *baseArr = @[@"姓 名:    ", @"性 别:    ", @"出生年月: ", @"证件类型: ", @"证件号码: ", @"特殊人群:  ", @"人群分类:  ", @"国籍:  ", @"籍贯: ", @"常住类型: ", @"户别:  ", @"民族: "];
+    NSArray *baseArr = @[@"姓 名:    ", @"性 别:    ", @"出生年月: ", @"证件类型: ", @"证件号码: ", @"特殊人群:  ", @"人群分类:  ", @"国籍:  ", @"籍贯: ", @"常住类型: "];
     
     NSArray *liftArr = @[@"暂住证: ", @"文化程度: ", @"户口所在地: ", @"现住址: ", @"所属派出所: "];
     NSArray *behaviorArr = @[@"邮政编码: ", @"E-mail:", @"住宅电话:", @"手机:"];
@@ -114,13 +136,24 @@
 
 - (void)setupUI
 {
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(scrooll:) name:@"IndexNotification" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(bring:) name:@"BringNotification" object:nil];
+    
 }
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
-
+- (void)bring:(NSNotification *)not
+{
+    NSLog(@"%@",not.userInfo);
+    fileString = [not.userInfo valueForKey:@"1"];
+    selectFlag = [[not.userInfo valueForKey:@"2"] integerValue];
+    UIButton *btn = [self.detailTableView viewWithTag:selectFlag];
+    [btn setTitle:fileString forState:UIControlStateNormal];
+    [myStlyPickerView removeFromSuperview];
+}
 
 - (void)leftAction:(UIBarButtonItem *)sender
 {
@@ -162,9 +195,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//    if (tableView == self.detailTableView) {
-//        return self.reLoadRightData.count;
-//    }
     return 1;
 }
 
@@ -191,6 +221,7 @@
         
         cell.textLabel.text = self.leftData[indexPath.row];
         cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
+        [cell.textLabel sizeToFit];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"u76_line.png"]];
         if (indexPath.row == 8) {
@@ -229,7 +260,7 @@
                 self.healthCell.titleTextField.delegate = self;
                 cell = self.healthCell;
                 
-                if (flagOne == 0 && indexPath.row <= 2 && indexPath.row != 1) {
+                if (flagOne == 0 && indexPath.row < 2 && indexPath.row != 1) {
                     [self.healthCell.iCornButton setImage:[UIImage imageNamed:@"-.png"] forState:UIControlStateNormal];
                     self.healthCell.iCornButton.tag = indexPath.row + 1000;
                 }else if (flagOne == 0 && indexPath.row == 1){
@@ -245,14 +276,93 @@
                         self.sexCell.womenBtn.tag = 103;
                         [self.sexCell.womenBtn addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
                         
-                        
-                        
                         cell = self.sexCell;
                     }
                     
                     
+                }else if (flagOne == 0 && indexPath.row == 2){
+                    
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"出生年月:";
+                        self.dropCell.selectButton.tag = 30000;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectTimeAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
+                    }
+                    
+                }else if (flagOne == 0 && indexPath.row == 3){
+                    
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"证件类型:";
+                        self.dropCell.selectButton.tag = 10000;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
+                    }
+        
+                }else if (flagOne == 0 && indexPath.row == 5){
+                    
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"特殊人群:";
+                      
+                        self.dropCell.selectButton.tag = 10001;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
+                    }
+                    
+                }else if (flagOne == 0 && indexPath.row == 6){
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"人群分类:";
+                        
+                        self.dropCell.selectButton.tag = 10002;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
+                    }
+                }else if (flagOne == 0 && indexPath.row == 7){
+                    
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"国籍:";
+                        self.dropCell.selectButton.tag = 10003;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
+                    }
+                }else if (flagOne == 0 && indexPath.row == 8){
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"籍贯:";
+                        self.dropCell.selectButton.tag = 20000;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectOriginAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
+                    }
+                }else if (flagOne == 0 && indexPath.row == 9) {
+                    
+                    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DropDownTableViewCell" owner:self options:nil];
+                    if (nib.count > 0) {
+                        
+                        self.dropCell = [nib objectAtIndex:0];
+                        self.dropCell.titleLabel.text = @"常住类型:";
+                        self.dropCell.selectButton.tag = 10004;
+                        [self.dropCell.selectButton addTarget:self action:@selector(selectButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                        cell = self.dropCell;
                 }
-                
+
+                }
+            
             }
             return cell;
         }
@@ -264,7 +374,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.listTableVeiw) {
-        return 45;
+        return (HEIGHT - CGRectGetMaxY(self.nameLabel.frame) - RANGY) / 9;
     }else if (tableView == self.detailTableView){
         return 50;
     }
@@ -286,19 +396,18 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 }
-
-
+// 释放键盘
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+// 点击左侧的table使右侧滚动时接到通知执行的方法
 -(void)scrooll:(NSNotification *)noti
 {
     [self.reLoadRightData removeAllObjects];
@@ -319,13 +428,13 @@
 {
     
 }
-
+// 点击空白回收键盘
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self.healthCell.titleTextField resignFirstResponder];
     [self.view endEditing:YES];
 }
 
+// 设置男女的点击方法
 - (void)buttonAction:(UIButton *)sender
 {
     if (sender.tag == 100) {
@@ -341,6 +450,7 @@
         [sender setImage:image1 forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     }else if (sender.tag == 102){
+         NSLog(@"woshi 102");
         UIButton *manbtn = [self.view viewWithTag:100];
         UIButton *btn = [self.view viewWithTag:101];
         UIImage *image = [UIImage imageNamed:@"yes.png"];
@@ -348,22 +458,27 @@
         [manbtn setImage:image1 forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     }else if (sender.tag == 103){
+        NSLog(@"woshi 103");
         UIButton *manbtn = [self.view viewWithTag:100];
         UIButton *btn = [self.view viewWithTag:101];
         UIImage *image = [UIImage imageNamed:@"yes.png"];
         UIImage *image1 = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [btn setImage:image1 forState:UIControlStateNormal];
         [manbtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        
     }
 }
-
+// 用户输入时
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    if (myStlyPickerView) {
+        myStlyPickerView.frame = CGRectMake(500, 500, WIDTH, 200);
+    }
     
     CGRect textFrame = textField.frame;
     CGPoint textPoint = [textField convertPoint:CGPointMake(0, textField.frame.size.height) toView:self.view];
     // 关键的一句，一定要转换
-    int offset = textPoint.y + textFrame.size.height + 216 - self.view.frame.size.height + 24;
+    int offset = textPoint.y + textFrame.size.height + 216 - self.view.frame.size.height + 10;
     // 24是textfield和键盘上方的间距，可以自由设定
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
@@ -372,19 +487,60 @@
     if (offset > 0) {        self.view.frame = CGRectMake(0.0f, -offset, self.view.frame.size.width, self.view.frame.size.height);    }
     [UIView commitAnimations];
 }
-// 用户输入时
+// 输入结束后，将视图恢复到原始状态
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    // 输入结束后，将视图恢复到原始状态
-    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);    return YES;
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    return YES;
     
 }
+// 编辑完return回收键盘
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return YES;
+}
+// 点击低下弹出自定义的View的方法
+- (void)selectButtonAction:(UIButton *)sender
+{
+    myStlyPickerView = [[MyPickerSelectView alloc] initWithFrame:CGRectMake(0, HEIGHT - 250, WIDTH, 250) withArray:numArr[sender.tag - 10000] withFlag:sender.tag];
+    [self.view addSubview:myStlyPickerView];
+   
 
+}
+// 点击底下自定义弹出地方籍贯的选择器的方法
+- (void)selectOriginAction:(UIButton *)sender
+{
+    AddressChoicePickerView *addressPickerView = [[AddressChoicePickerView alloc]init];
+    addressPickerView.block = ^(AddressChoicePickerView *view,UIButton *btn,AreaObject *locate){
+        [sender setTitle:[NSString stringWithFormat:@"%@",locate] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    };
+    [addressPickerView show];
+
+}
+// 点击底下弹出自定义时间生日的选择器的方法
+- (void)selectTimeAction:(UIButton *)sender
+{
+    NSDate *date=[NSDate dateWithTimeIntervalSinceNow:9000000];
+    _pickview =[[ZHPickView alloc] initDatePickWithDate:date datePickerMode:UIDatePickerModeDate isHaveNavControler:NO];
+    [_pickview setToolbarTintColor:[UIColor colorWithRed:15/255.0 green:161/255.0 blue:240/255.0 alpha:1]];
+    [_pickview setTintColor:[UIColor whiteColor]];
+    _pickview.delegate=self;
+    
+    [_pickview show];
+    
+}
+// 当选择时间选择器确定后走的代理方法
+-(void)toobarDonBtnHaveClick:(ZHPickView *)pickView resultString:(NSString *)resultString{
+    
+    UIButton *btn = [self.detailTableView viewWithTag:30000];
+    NSString *str = [resultString substringToIndex:10];
+    [btn setTitle:str forState:UIControlStateNormal];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
-//    [self.listTableVeiw selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-//    [self.detailTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
