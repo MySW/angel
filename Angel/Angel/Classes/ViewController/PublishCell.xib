@@ -54,23 +54,23 @@
                         <color key="textColor" red="0.4704269255050505" green="0.4704269255050505" blue="0.4704269255050505" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfL-0d-10r">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfL-0d-10r">
                         <rect key="frame" x="229" y="61" width="30" height="25"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="fyV-ML-fhR"/>
                             <constraint firstAttribute="height" constant="25" id="t7Z-hX-MJN"/>
                         </constraints>
-                        <state key="normal" backgroundImage="select_like.png"/>
+                        <state key="normal" image="select_like.png"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teb-6R-3JR">
-                        <rect key="frame" x="271" y="61" width="30" height="25"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teb-6R-3JR">
+                        <rect key="frame" x="271" y="62" width="30" height="25"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="T5G-LR-2oC"/>
                             <constraint firstAttribute="height" constant="25" id="nDg-Cb-OhK"/>
                         </constraints>
-                        <state key="normal" backgroundImage="comments.png"/>
+                        <state key="normal" image="comments.png"/>
                     </button>
                 </subviews>
                 <animations/>
@@ -106,6 +106,6 @@
     <resources>
         <image name="cat" width="111" height="121"/>
         <image name="comments.png" width="14" height="13"/>
-        <image name="select_like.png" width="22" height="22"/>
+        <image name="select_like.png" width="44" height="44"/>
     </resources>
 </document>

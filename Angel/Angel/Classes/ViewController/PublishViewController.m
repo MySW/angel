@@ -51,6 +51,7 @@
         publishCell = [nib objectAtIndex:0];
         [publishCell.publishCollection addTarget:self action:@selector(collectionAction:) forControlEvents:UIControlEventTouchUpInside];
         publishCell.publishCollection.tag = 5000 + indexPath.row;
+        [publishCell.publishCollection setImage:[UIImage imageNamed:@"selected_like.png"] forState:UIControlStateSelected];
         [publishCell.publishTalke addTarget:self action:@selector(talkeAction:) forControlEvents:UIControlEventTouchUpInside];
         publishCell.publishTalke.tag = 6000 + indexPath.row;
         cell = publishCell;
@@ -60,12 +61,7 @@
 
 - (void)collectionAction:(UIButton *)sender
 {
-    [sender setImage:[UIImage imageNamed:@"selected_like.png"] forState:UIControlStateNormal];
-
-    if ([sender.imageView.image isEqual:@"selected_like.png"]) {
-        [sender setImage:[UIImage imageNamed:@"select_like.png"] forState:UIControlStateNormal];
-    }
-
+    [sender setSelected:!sender.selected];
 }
 
 - (void)talkeAction:(UIButton *)sender

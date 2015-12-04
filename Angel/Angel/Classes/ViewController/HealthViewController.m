@@ -502,6 +502,7 @@
 // 点击低下弹出自定义的View的方法
 - (void)selectButtonAction:(UIButton *)sender
 {
+    [myStlyPickerView removeFromSuperview];
     myStlyPickerView = [[MyPickerSelectView alloc] initWithFrame:CGRectMake(0, HEIGHT - 250, WIDTH, 250) withArray:numArr[sender.tag - 10000] withFlag:sender.tag];
     [self.view addSubview:myStlyPickerView];
    

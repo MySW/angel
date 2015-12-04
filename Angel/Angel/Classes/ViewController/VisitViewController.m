@@ -57,7 +57,7 @@
     callDocter.backgroundColor = RGBCOLOR(15, 161, 240);
     callDocter.layer.cornerRadius = 5;
     callDocter.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    [callDocter setTitle:@"联系医生" forState:UIControlStateNormal];
+    [callDocter setTitle:@"申请家访" forState:UIControlStateNormal];
     [callDocter setTitleColor:RGBCOLOR(255, 255, 255) forState:UIControlStateNormal];
     [callDocter addTarget:self action:@selector(callDocterAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:callDocter];

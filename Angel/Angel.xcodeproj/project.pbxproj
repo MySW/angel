@@ -399,7 +399,7 @@
 		AB8A44391C1064310065AEE7 /* HealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
 		AB8A443A1C1064310065AEE7 /* HealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		AB8A443C1C1066140065AEE7 /* ZHpickView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZHpickView-Info.plist"; sourceTree = "<group>"; };
-		AB8A443E1C1067110065AEE7 /* AreaPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AreaPlist.plist; sourceTree = "<group>"; };
+		AB8A443E1C1067110065AEE7 /* AreaPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AreaPlist.plist; path = Classes/ViewController/AreaPlist.plist; sourceTree = "<group>"; };
 		AB8B38C51BFC122B0053A84D /* MyDocterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocterTableViewCell.h; sourceTree = "<group>"; };
 		AB8B38C61BFC122B0053A84D /* MyDocterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocterTableViewCell.m; sourceTree = "<group>"; };
 		AB8B38C71BFC122B0053A84D /* MyDocterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDocterTableViewCell.xib; sourceTree = "<group>"; };
@@ -722,6 +722,7 @@
 				AB7F69551BFB18120050A541 /* Classes */,
 				AB7F692B1BFB17F50050A541 /* Main.storyboard */,
 				AB7F692E1BFB17F50050A541 /* Assets.xcassets */,
+				AB8A443E1C1067110065AEE7 /* AreaPlist.plist */,
 				ABF2DD2C1C0DA0630039D864 /* quick_ask@2x.png */,
 				AB2241461C0851730028ACB5 /* selectDown@2x.png */,
 				AB2241441C0847D40028ACB5 /* backRight@2x.png */,
@@ -1026,7 +1027,6 @@
 		ABE3E9BF1BFEFD1E007B9521 /* HOME */ = {
 			isa = PBXGroup;
 			children = (
-				AB8A443E1C1067110065AEE7 /* AreaPlist.plist */,
 				ABEAA1431C07E9F600E09F8A /* home */,
 				ABEAA1421C07E4D700E09F8A /* HomeDocter */,
 				AB26915F1C00CCBE0079ED5C /* FindDocter */,

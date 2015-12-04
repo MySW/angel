@@ -76,7 +76,7 @@
     
     // 设置下部分UI
     self.control = [[UISegmentedControl alloc] initWithItems:self.menuItem];
-    self.control.frame = CGRectMake(0, CGRectGetMaxY(self.headTablView.frame), WIDTH, 40);
+    self.control.frame = CGRectMake(-2, CGRectGetMaxY(self.headTablView.frame), WIDTH+4, 40);
     self.control.backgroundColor = RGBCOLOR(47, 202, 157);
     self.control.tintColor =[UIColor whiteColor];
     self.control.selectedSegmentIndex = 0;

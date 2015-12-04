@@ -108,8 +108,8 @@
     self.shapeBtn.frame = CGRectMake(self.view.frame.size.width / 6 * 5  , CGRectGetMaxY(self.docterDetailTVC.frame) + 10, TABHEIGHT - 20, TABHEIGHT - 20);
     self.tabBarController.tabBar.opaque = YES;
     [_shapeBtn setImage:[UIImage imageNamed:@"Shape-20.png"] forState:UIControlStateNormal];
+    [_shapeBtn setImage:[UIImage imageNamed:@"select_heart.png"] forState:UIControlStateSelected];
     _shapeBtn.layer.cornerRadius = 5;
-    self.shapeBtn.tag = 5000;
     [_shapeBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_shapeBtn];
     
@@ -117,13 +117,8 @@
 
 - (void)btnAction:(UIButton *)sender
 {
-    if (sender.tag == 5000) {
-        [_shapeBtn setImage:[UIImage imageNamed:@"select_heart.png"] forState:UIControlStateNormal];
-        self.shapeBtn.tag = 5001;
-    } else if (sender.tag == 5001) {
-        [_shapeBtn setImage:[UIImage imageNamed:@"Shape-20.png"] forState:UIControlStateNormal];
-        self.shapeBtn.tag = 5000;
-    }
+    [sender setSelected:!sender.selected];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
