@@ -7,12 +7,10 @@
 //
 
 #import "PressurViewController.h"
-#import "BloodPressViewController.h"
-#import "YearViewController.h"
-#import "MonthViewController.h"
-#import "WeekViewController.h"
-
-
+#import "MonthSegmentViewController.h"
+#import "WeekSegmentViewController.h"
+#import "YearSegmentViewController.h"
+#import "DaySegmentViewController.h"
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -21,6 +19,9 @@
 {
     UIView  *contview;
     UIScrollView *contentScrollView;
+    WeekSegmentViewController *weekVC;
+    MonthSegmentViewController *monthVC;
+    YearSegmentViewController *yearVC;
 }
 @end
 
@@ -42,7 +43,7 @@
    
     // 设置下部分UI
     self.control = [[UISegmentedControl alloc] initWithItems:self.menuItem];
-    self.control.frame = CGRectMake(0, 64, WIDTH, 40);
+    self.control.frame = CGRectMake(0, 74, WIDTH, 40);
     self.control.backgroundColor = RGBCOLOR(15, 161, 240);
     self.control.tintColor =[UIColor whiteColor];
     self.control.selectedSegmentIndex = 0;
@@ -50,27 +51,10 @@
     [self.view addSubview:self.control];
 
     contview = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.control.frame), (self.menuItem.count * WIDTH), HEIGHT - CGRectGetMaxY(self.control.frame) )];
- 
-    YearViewController *yearVC = [YearViewController new];
-    yearVC.view.frame = CGRectMake(WIDTH * 3, 0, WIDTH, CGRectGetHeight(contview.frame));
-//    NewYearViewController *newYearVC = [NewYearViewController new];
-//    newYearVC.view.frame = CGRectMake(WIDTH * 3, 0, WIDTH, CGRectGetHeight(contview.frame));
-    MonthViewController *monthVC = [[MonthViewController alloc] init];
-    monthVC.view.frame = CGRectMake(WIDTH * 2, 0, WIDTH, CGRectGetHeight(contview.frame));
-    WeekViewController *weekVC = [WeekViewController new];
-    weekVC.view.frame = CGRectMake(WIDTH, 0, WIDTH, CGRectGetHeight(contview.frame));
-   
-    [contview addSubview:yearVC.view];
-//    [contview addSubview:newYearVC.view];
-    [contview addSubview:monthVC.view];
-    [contview addSubview:weekVC.view];
+     DaySegmentViewController *dayVC = [DaySegmentViewController new];
+    dayVC.view.frame = CGRectMake(0, 0, WIDTH, CGRectGetHeight(contview.frame));
+    [contview addSubview:dayVC.view];
     [self.view addSubview:contview];
-
-    
-    
-    
-    
-    
 }
 
 - (void)setupNav {
@@ -133,17 +117,41 @@
             break;
         case 1:
         {
-            NSLog(@"%ld", (long)i);
+            if (monthVC) {
+                [monthVC.view removeFromSuperview];
+            }
+            if (yearVC) {
+                [yearVC.view removeFromSuperview];
+            }
+            weekVC = [WeekSegmentViewController new];
+            weekVC.view.frame = CGRectMake(WIDTH, 0, WIDTH, CGRectGetHeight(contview.frame));
+            [contview addSubview:weekVC.view];
         }
             break;
         case 2:
         {
-            NSLog(@"%ld", (long)i);
+            if (weekVC) {
+                [weekVC.view removeFromSuperview];
+            }
+            if (yearVC) {
+                [yearVC.view removeFromSuperview];
+            }
+            monthVC = [MonthSegmentViewController new];
+            monthVC.view.frame = CGRectMake(WIDTH * 2, 0, WIDTH, CGRectGetHeight(contview.frame));
+            [contview addSubview:monthVC.view];
         }
             break;
         case 3:
         {
-            NSLog(@"%ld", (long)i);
+            if (weekVC) {
+                [weekVC.view removeFromSuperview];
+            }
+            if (monthVC) {
+                [monthVC.view removeFromSuperview];
+            }
+            yearVC = [YearSegmentViewController new];
+            yearVC.view.frame = CGRectMake(WIDTH * 3, 0, WIDTH, CGRectGetHeight(contview.frame));
+            [contview addSubview:yearVC.view];
         }
             break;
         default:

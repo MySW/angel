@@ -11,7 +11,6 @@
 #import "QuestionTableViewController.h"
 #import "HomeTableViewController.h"
 #import "BloodSugerViewController.h"
-#import "BloodPressViewController.h"
 #import "PressurViewController.h"
 
 @interface AssistantTableViewController ()

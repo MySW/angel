@@ -51,7 +51,6 @@
     self.bloodSugerButton.layer.masksToBounds = YES;
     self.bloodSugerButton.layer.borderWidth = 1;
     self.bloodSugerButton.layer.borderColor = [UIColor whiteColor].CGColor;
-//    [self.bloodSugerButton addTarget:self action:@selector(setupPic) forControlEvents:UIControlEventTouchUpInside];
     self.bloodSugerButton.enabled = NO;
     self.ballLabel.layer.cornerRadius = 15;
     self.ballLabel.layer.masksToBounds = YES;
@@ -77,8 +76,6 @@
     CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 1.0, 1.0, 1.0, 1.0);  //颜色
     CGContextBeginPath(UIGraphicsGetCurrentContext());
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), 0, 77);  //起点坐标
-//    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), 40, 100);
-//    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), 80, 75);   //终点坐标
     for (int i = 1; i <= 120; i++) {
         int y = arc4random()%60 + 40;
         
@@ -93,9 +90,7 @@
     //    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), 100, 75);   //终点坐标
     CGContextStrokePath(UIGraphicsGetCurrentContext());
     self.linePicView.image=UIGraphicsGetImageFromCurrentImageContext();
-    NSLog(@"%@",bloodSugerArr);
     [bloodSugerArr removeAllObjects];
-    NSLog(@"%@",bloodSugerArr);
     float heartNum = arc4random() % 30 + 50;
     NSString *heartStr = [NSString stringWithFormat:@"%0.1f",heartNum / 10];
     self.numberLabel.text = heartStr;
@@ -106,23 +101,13 @@
         self.ballLabel.text = @"偏低";
     }else {
         self.ballLabel.text = @"正常";
-        
     }
-    
-    
-    
-    
 }
-
-
-
-
-
 
 
 - (void)leftAction:(UIBarButtonItem *)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -130,15 +115,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (void)rightAction
 {
     

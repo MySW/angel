@@ -38,6 +38,14 @@
 		AB3D98E81C08613600CEFF10 /* 中医科@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3D98CD1C08613600CEFF10 /* 中医科@2x.png */; };
 		AB3D98E91C08613600CEFF10 /* 肿瘤@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3D98CE1C08613600CEFF10 /* 肿瘤@2x.png */; };
 		AB3D98EC1C0873F600CEFF10 /* HomeDocterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3D98EB1C0873F600CEFF10 /* HomeDocterViewController.m */; };
+		AB55B8361C11B9800050309D /* CBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B8311C11B9800050309D /* CBChartView.m */; };
+		AB55B8371C11B9800050309D /* HeartLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B8331C11B9800050309D /* HeartLineView.m */; };
+		AB55B8381C11B9800050309D /* UIView+FrameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B8351C11B9800050309D /* UIView+FrameSet.m */; };
+		AB55B8411C11B9F20050309D /* DaySegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B83A1C11B9F20050309D /* DaySegmentViewController.m */; };
+		AB55B8421C11B9F20050309D /* MonthSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B83C1C11B9F20050309D /* MonthSegmentViewController.m */; };
+		AB55B8431C11B9F20050309D /* WeekSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B83E1C11B9F20050309D /* WeekSegmentViewController.m */; };
+		AB55B8441C11B9F20050309D /* YearSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B8401C11B9F20050309D /* YearSegmentViewController.m */; };
+		AB55B8471C11BA190050309D /* PressurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB55B8461C11BA190050309D /* PressurViewController.m */; };
 		AB7269081C095A540026785F /* ConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7269071C095A540026785F /* ConsultViewController.m */; };
 		AB72690B1C095A8D0026785F /* VisitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72690A1C095A8D0026785F /* VisitViewController.m */; };
 		AB72690E1C095AA80026785F /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72690D1C095AA80026785F /* GuideViewController.m */; };
@@ -100,8 +108,6 @@
 		AB8B38D41BFC4CCE0053A84D /* SelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B38D21BFC4CCE0053A84D /* SelectTableViewCell.m */; };
 		AB8B38D51BFC4CCE0053A84D /* SelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8B38D31BFC4CCE0053A84D /* SelectTableViewCell.xib */; };
 		ABB1F0611C0C46D700EADD14 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1F0601C0C46D700EADD14 /* CustomButton.m */; };
-		ABB1F0651C0C5D9A00EADD14 /* BloodPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1F0631C0C5D9A00EADD14 /* BloodPressViewController.m */; };
-		ABB1F0661C0C5D9A00EADD14 /* BloodPressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB1F0641C0C5D9A00EADD14 /* BloodPressViewController.xib */; };
 		ABB1F0711C0C5DC200EADD14 /* AssistantsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1F0681C0C5DC100EADD14 /* AssistantsTableViewCell.m */; };
 		ABB1F0721C0C5DC200EADD14 /* AssistantsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB1F0691C0C5DC100EADD14 /* AssistantsTableViewCell.xib */; };
 		ABB1F0761C0C5DC200EADD14 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB1F0701C0C5DC100EADD14 /* QuestionTableViewController.m */; };
@@ -233,16 +239,7 @@
 		ABF2DD3D1C0DC74C0039D864 /* SexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD3B1C0DC74C0039D864 /* SexTableViewCell.xib */; };
 		ABF2DD441C0DC7E60039D864 /* OtherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD421C0DC7E60039D864 /* OtherTableViewCell.m */; };
 		ABF2DD451C0DC7E60039D864 /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD431C0DC7E60039D864 /* OtherTableViewCell.xib */; };
-		ABF2DD521C0DCA250039D864 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD471C0DCA250039D864 /* DayViewController.m */; };
-		ABF2DD531C0DCA250039D864 /* DayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD481C0DCA250039D864 /* DayViewController.xib */; };
-		ABF2DD541C0DCA250039D864 /* MonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD4A1C0DCA250039D864 /* MonthViewController.m */; };
-		ABF2DD551C0DCA250039D864 /* MonthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD4B1C0DCA250039D864 /* MonthViewController.xib */; };
-		ABF2DD561C0DCA250039D864 /* WeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD4D1C0DCA250039D864 /* WeekViewController.m */; };
-		ABF2DD571C0DCA250039D864 /* WeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD4E1C0DCA250039D864 /* WeekViewController.xib */; };
-		ABF2DD581C0DCA250039D864 /* YearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD501C0DCA250039D864 /* YearViewController.m */; };
-		ABF2DD591C0DCA250039D864 /* YearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2DD511C0DCA250039D864 /* YearViewController.xib */; };
 		ABF2DD5C1C0DCA7F0039D864 /* AssistantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD5B1C0DCA7F0039D864 /* AssistantTableViewController.m */; };
-		ABF2DD5F1C0DCA970039D864 /* PressurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2DD5E1C0DCA970039D864 /* PressurViewController.m */; };
 		ABF588331C0705B500ACF127 /* questLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF588321C0705B500ACF127 /* questLine@2x.png */; };
 		ABF588351C071EEA00ACF127 /* select_left.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF588341C071EEA00ACF127 /* select_left.png */; };
 /* End PBXBuildFile section */
@@ -299,6 +296,22 @@
 		AB3D98CE1C08613600CEFF10 /* 肿瘤@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "肿瘤@2x.png"; sourceTree = "<group>"; };
 		AB3D98EA1C0873F500CEFF10 /* HomeDocterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDocterViewController.h; sourceTree = "<group>"; };
 		AB3D98EB1C0873F600CEFF10 /* HomeDocterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDocterViewController.m; sourceTree = "<group>"; };
+		AB55B8301C11B9800050309D /* CBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBChartView.h; sourceTree = "<group>"; };
+		AB55B8311C11B9800050309D /* CBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBChartView.m; sourceTree = "<group>"; };
+		AB55B8321C11B9800050309D /* HeartLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartLineView.h; sourceTree = "<group>"; };
+		AB55B8331C11B9800050309D /* HeartLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartLineView.m; sourceTree = "<group>"; };
+		AB55B8341C11B9800050309D /* UIView+FrameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameSet.h"; sourceTree = "<group>"; };
+		AB55B8351C11B9800050309D /* UIView+FrameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameSet.m"; sourceTree = "<group>"; };
+		AB55B8391C11B9F20050309D /* DaySegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySegmentViewController.h; sourceTree = "<group>"; };
+		AB55B83A1C11B9F20050309D /* DaySegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySegmentViewController.m; sourceTree = "<group>"; };
+		AB55B83B1C11B9F20050309D /* MonthSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthSegmentViewController.h; sourceTree = "<group>"; };
+		AB55B83C1C11B9F20050309D /* MonthSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthSegmentViewController.m; sourceTree = "<group>"; };
+		AB55B83D1C11B9F20050309D /* WeekSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekSegmentViewController.h; sourceTree = "<group>"; };
+		AB55B83E1C11B9F20050309D /* WeekSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekSegmentViewController.m; sourceTree = "<group>"; };
+		AB55B83F1C11B9F20050309D /* YearSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearSegmentViewController.h; sourceTree = "<group>"; };
+		AB55B8401C11B9F20050309D /* YearSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearSegmentViewController.m; sourceTree = "<group>"; };
+		AB55B8451C11BA190050309D /* PressurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressurViewController.h; sourceTree = "<group>"; };
+		AB55B8461C11BA190050309D /* PressurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressurViewController.m; sourceTree = "<group>"; };
 		AB7269061C095A540026785F /* ConsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultViewController.h; sourceTree = "<group>"; };
 		AB7269071C095A540026785F /* ConsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultViewController.m; sourceTree = "<group>"; };
 		AB7269091C095A8D0026785F /* VisitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitViewController.h; sourceTree = "<group>"; };
@@ -412,9 +425,6 @@
 		AB8B38D31BFC4CCE0053A84D /* SelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTableViewCell.xib; sourceTree = "<group>"; };
 		ABB1F05F1C0C46D700EADD14 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		ABB1F0601C0C46D700EADD14 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		ABB1F0621C0C5D9A00EADD14 /* BloodPressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodPressViewController.h; sourceTree = "<group>"; };
-		ABB1F0631C0C5D9A00EADD14 /* BloodPressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodPressViewController.m; sourceTree = "<group>"; };
-		ABB1F0641C0C5D9A00EADD14 /* BloodPressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BloodPressViewController.xib; sourceTree = "<group>"; };
 		ABB1F0671C0C5DC100EADD14 /* AssistantsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantsTableViewCell.h; sourceTree = "<group>"; };
 		ABB1F0681C0C5DC100EADD14 /* AssistantsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantsTableViewCell.m; sourceTree = "<group>"; };
 		ABB1F0691C0C5DC100EADD14 /* AssistantsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssistantsTableViewCell.xib; sourceTree = "<group>"; };
@@ -565,22 +575,8 @@
 		ABF2DD411C0DC7E60039D864 /* OtherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTableViewCell.h; sourceTree = "<group>"; };
 		ABF2DD421C0DC7E60039D864 /* OtherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTableViewCell.m; sourceTree = "<group>"; };
 		ABF2DD431C0DC7E60039D864 /* OtherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
-		ABF2DD461C0DCA250039D864 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
-		ABF2DD471C0DCA250039D864 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
-		ABF2DD481C0DCA250039D864 /* DayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayViewController.xib; sourceTree = "<group>"; };
-		ABF2DD491C0DCA250039D864 /* MonthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthViewController.h; sourceTree = "<group>"; };
-		ABF2DD4A1C0DCA250039D864 /* MonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthViewController.m; sourceTree = "<group>"; };
-		ABF2DD4B1C0DCA250039D864 /* MonthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthViewController.xib; sourceTree = "<group>"; };
-		ABF2DD4C1C0DCA250039D864 /* WeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekViewController.h; sourceTree = "<group>"; };
-		ABF2DD4D1C0DCA250039D864 /* WeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekViewController.m; sourceTree = "<group>"; };
-		ABF2DD4E1C0DCA250039D864 /* WeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekViewController.xib; sourceTree = "<group>"; };
-		ABF2DD4F1C0DCA250039D864 /* YearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearViewController.h; sourceTree = "<group>"; };
-		ABF2DD501C0DCA250039D864 /* YearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearViewController.m; sourceTree = "<group>"; };
-		ABF2DD511C0DCA250039D864 /* YearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YearViewController.xib; sourceTree = "<group>"; };
 		ABF2DD5A1C0DCA7F0039D864 /* AssistantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantTableViewController.h; sourceTree = "<group>"; };
 		ABF2DD5B1C0DCA7F0039D864 /* AssistantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantTableViewController.m; sourceTree = "<group>"; };
-		ABF2DD5D1C0DCA970039D864 /* PressurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PressurViewController.h; sourceTree = "<group>"; };
-		ABF2DD5E1C0DCA970039D864 /* PressurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PressurViewController.m; sourceTree = "<group>"; };
 		ABF588321C0705B500ACF127 /* questLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "questLine@2x.png"; sourceTree = "<group>"; };
 		ABF588341C071EEA00ACF127 /* select_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_left.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -780,6 +776,12 @@
 				AB8A442C1C1063A90065AEE7 /* MyPickerSelectView.m */,
 				AB8A442D1C1063A90065AEE7 /* ZHPickView.h */,
 				AB8A442E1C1063A90065AEE7 /* ZHPickView.m */,
+				AB55B8301C11B9800050309D /* CBChartView.h */,
+				AB55B8311C11B9800050309D /* CBChartView.m */,
+				AB55B8321C11B9800050309D /* HeartLineView.h */,
+				AB55B8331C11B9800050309D /* HeartLineView.m */,
+				AB55B8341C11B9800050309D /* UIView+FrameSet.h */,
+				AB55B8351C11B9800050309D /* UIView+FrameSet.m */,
 				AB7F69571BFB18120050A541 /* Manager */,
 				AB7F69581BFB18120050A541 /* Model */,
 				AB7F69591BFB18120050A541 /* Request */,
@@ -1077,14 +1079,11 @@
 			children = (
 				ABF2DD5A1C0DCA7F0039D864 /* AssistantTableViewController.h */,
 				ABF2DD5B1C0DCA7F0039D864 /* AssistantTableViewController.m */,
-				ABF2DD5D1C0DCA970039D864 /* PressurViewController.h */,
-				ABF2DD5E1C0DCA970039D864 /* PressurViewController.m */,
+				AB55B8451C11BA190050309D /* PressurViewController.h */,
+				AB55B8461C11BA190050309D /* PressurViewController.m */,
 				ABB1F0771C0C5DDB00EADD14 /* BloodSugerViewController.h */,
 				ABB1F0781C0C5DDB00EADD14 /* BloodSugerViewController.m */,
 				ABB1F0791C0C5DDB00EADD14 /* BloodSugerViewController.xib */,
-				ABB1F0621C0C5D9A00EADD14 /* BloodPressViewController.h */,
-				ABB1F0631C0C5D9A00EADD14 /* BloodPressViewController.m */,
-				ABB1F0641C0C5D9A00EADD14 /* BloodPressViewController.xib */,
 				ABB1F0671C0C5DC100EADD14 /* AssistantsTableViewCell.h */,
 				ABB1F0681C0C5DC100EADD14 /* AssistantsTableViewCell.m */,
 				ABB1F0691C0C5DC100EADD14 /* AssistantsTableViewCell.xib */,
@@ -1093,18 +1092,14 @@
 				ABF2DD361C0DC6FE0039D864 /* QuestionTableViewCell.xib */,
 				ABB1F06F1C0C5DC100EADD14 /* QuestionTableViewController.h */,
 				ABB1F0701C0C5DC100EADD14 /* QuestionTableViewController.m */,
-				ABF2DD461C0DCA250039D864 /* DayViewController.h */,
-				ABF2DD471C0DCA250039D864 /* DayViewController.m */,
-				ABF2DD481C0DCA250039D864 /* DayViewController.xib */,
-				ABF2DD491C0DCA250039D864 /* MonthViewController.h */,
-				ABF2DD4A1C0DCA250039D864 /* MonthViewController.m */,
-				ABF2DD4B1C0DCA250039D864 /* MonthViewController.xib */,
-				ABF2DD4C1C0DCA250039D864 /* WeekViewController.h */,
-				ABF2DD4D1C0DCA250039D864 /* WeekViewController.m */,
-				ABF2DD4E1C0DCA250039D864 /* WeekViewController.xib */,
-				ABF2DD4F1C0DCA250039D864 /* YearViewController.h */,
-				ABF2DD501C0DCA250039D864 /* YearViewController.m */,
-				ABF2DD511C0DCA250039D864 /* YearViewController.xib */,
+				AB55B8391C11B9F20050309D /* DaySegmentViewController.h */,
+				AB55B83A1C11B9F20050309D /* DaySegmentViewController.m */,
+				AB55B83D1C11B9F20050309D /* WeekSegmentViewController.h */,
+				AB55B83E1C11B9F20050309D /* WeekSegmentViewController.m */,
+				AB55B83B1C11B9F20050309D /* MonthSegmentViewController.h */,
+				AB55B83C1C11B9F20050309D /* MonthSegmentViewController.m */,
+				AB55B83F1C11B9F20050309D /* YearSegmentViewController.h */,
+				AB55B8401C11B9F20050309D /* YearSegmentViewController.m */,
 			);
 			name = ASSISTANT;
 			sourceTree = "<group>";
@@ -1327,7 +1322,6 @@
 				ABCEFF191C02FED700D94D16 /* CALENDAR---OK@2x.png in Resources */,
 				ABB1F0721C0C5DC200EADD14 /* AssistantsTableViewCell.xib in Resources */,
 				ABD40BA31C00F37A0021FE8A /* keshi6@2x.png in Resources */,
-				ABF2DD551C0DCA250039D864 /* MonthViewController.xib in Resources */,
 				AB85CD5E1C0223D0001D7368 /* UserSpeakTableViewCell.xib in Resources */,
 				AB8A443D1C1066140065AEE7 /* ZHpickView-Info.plist in Resources */,
 				AB3D98E91C08613600CEFF10 /* 肿瘤@2x.png in Resources */,
@@ -1337,7 +1331,6 @@
 				ABEA17AA1C06AFB200B6E963 /* 圆角矩形-7@2x.png in Resources */,
 				ABD40B9A1C00F37A0021FE8A /* keshi1@2x.png in Resources */,
 				AB3D98DF1C08613600CEFF10 /* 其他@2x.png in Resources */,
-				ABB1F0661C0C5D9A00EADD14 /* BloodPressViewController.xib in Resources */,
 				ABF2DD321C0DB7B10039D864 /* select_like.png in Resources */,
 				ABCEFF321C02FED700D94D16 /* 组-9@2x.png in Resources */,
 				ABEA17C11C06AFB200B6E963 /* 清除缓存@2x.png in Resources */,
@@ -1367,7 +1360,6 @@
 				ABF2DD2B1C0D75B40039D864 /* home_docter@2x.png in Resources */,
 				ABEA179F1C06AFB200B6E963 /* 健康助手未选中@2x.png in Resources */,
 				ABEA17921C06AFB200B6E963 /* comments@2x.png in Resources */,
-				ABF2DD571C0DCA250039D864 /* WeekViewController.xib in Resources */,
 				AB2241471C0851730028ACB5 /* selectDown@2x.png in Resources */,
 				ABCA1C691C0086EB00BD6B4B /* jinru@2x.png in Resources */,
 				ABB1F07D1C0C5EAC00EADD14 /* 血糖的折线图的@2x.png in Resources */,
@@ -1377,7 +1369,6 @@
 				ABF2DD331C0DB7B10039D864 /* selected_like.png in Resources */,
 				ABD40BA01C00F37A0021FE8A /* keshi3@2x.png in Resources */,
 				AB3D98D71C08613600CEFF10 /* 介入关怀科@2x.png in Resources */,
-				ABF2DD531C0DCA250039D864 /* DayViewController.xib in Resources */,
 				ABD40B9E1C00F37A0021FE8A /* keshi23@2x.png in Resources */,
 				ABCEFF1A1C02FED700D94D16 /* Shape-20@2x.png in Resources */,
 				ABD40B941C00F37A0021FE8A /* keshi14@2x.png in Resources */,
@@ -1400,7 +1391,6 @@
 				ABF2DD2D1C0DA0630039D864 /* quick_ask@2x.png in Resources */,
 				ABEA17D31C06AFB200B6E963 /* 评价@2x.png in Resources */,
 				ABF2DD291C0D31DE0039D864 /* PublishCell.xib in Resources */,
-				ABF2DD591C0DCA250039D864 /* YearViewController.xib in Resources */,
 				ABEA17C31C06AFB200B6E963 /* 白@2x.png in Resources */,
 				AB3D98DE1C08613600CEFF10 /* 皮肤科@2x.png in Resources */,
 				AB3D98DC1C08613600CEFF10 /* 麻醉科@2x.png in Resources */,
@@ -1487,15 +1477,17 @@
 				AB7F69A51BFB2C8F0050A541 /* SDWebImagePrefetcher.m in Sources */,
 				ABB1F0911C0C608C00EADD14 /* PersonTableViewController.m in Sources */,
 				AB85CD5D1C0223D0001D7368 /* UserSpeakTableViewCell.m in Sources */,
+				AB55B8471C11BA190050309D /* PressurViewController.m in Sources */,
 				AB7F69761BFB2C240050A541 /* TADotView.m in Sources */,
+				AB55B8411C11B9F20050309D /* DaySegmentViewController.m in Sources */,
 				ABB1F07A1C0C5DDB00EADD14 /* BloodSugerViewController.m in Sources */,
 				ABF0CF551C01E281002569B7 /* DocterDateTableViewCell.m in Sources */,
+				AB55B8441C11B9F20050309D /* YearSegmentViewController.m in Sources */,
 				AB7269111C095AD10026785F /* PublishViewController.m in Sources */,
 				AB8A44311C1063A90065AEE7 /* AreaObject.m in Sources */,
 				AB7F69741BFB2C240050A541 /* TAAbstractDotView.m in Sources */,
 				AB7F699E1BFB2C8F0050A541 /* NSData+ImageContentType.m in Sources */,
 				AB7F69751BFB2C240050A541 /* TAAnimatedDotView.m in Sources */,
-				ABF2DD541C0DCA250039D864 /* MonthViewController.m in Sources */,
 				ABF2DD371C0DC6FE0039D864 /* QuestionTableViewCell.m in Sources */,
 				AB7F697A1BFB2C240050A541 /* UIView+SDExtension.m in Sources */,
 				ABC9A47D1BFB6089008A6D69 /* QuestTableViewCell.m in Sources */,
@@ -1504,17 +1496,19 @@
 				AB7F69A31BFB2C8F0050A541 /* SDWebImageDownloaderOperation.m in Sources */,
 				ABE1067D1C0BEC4A00941FB2 /* WYLTView.m in Sources */,
 				AB8B38CD1BFC19710053A84D /* AskTableViewCell.m in Sources */,
-				ABB1F0651C0C5D9A00EADD14 /* BloodPressViewController.m in Sources */,
 				AB3D98EC1C0873F600CEFF10 /* HomeDocterViewController.m in Sources */,
+				AB55B8381C11B9800050309D /* UIView+FrameSet.m in Sources */,
 				ABB1F09B1C0C60CE00EADD14 /* HeaderTableViewCell.m in Sources */,
 				AB7F699D1BFB2C8F0050A541 /* MKAnnotationView+WebCache.m in Sources */,
 				AB72691A1C09B1410026785F /* GuideCell.m in Sources */,
 				AB7F69A01BFB2C8F0050A541 /* SDWebImageCompat.m in Sources */,
 				AB7F692A1BFB17F50050A541 /* ViewController.m in Sources */,
+				AB55B8371C11B9800050309D /* HeartLineView.m in Sources */,
 				AB7F69A81BFB2C8F0050A541 /* UIImage+MultiFormat.m in Sources */,
 				ABB1F0711C0C5DC200EADD14 /* AssistantsTableViewCell.m in Sources */,
 				ABE3E9CC1BFF0015007B9521 /* FindTableViewCell.m in Sources */,
 				AB7F69AB1BFB2C8F0050A541 /* UIImageView+WebCache.m in Sources */,
+				AB55B8361C11B9800050309D /* CBChartView.m in Sources */,
 				AB7F69771BFB2C240050A541 /* TAPageControl.m in Sources */,
 				AB8A442F1C1063A90065AEE7 /* AddressChoicePickerView.m in Sources */,
 				AB8A44371C1063F60065AEE7 /* DropDownTableViewCell.m in Sources */,
@@ -1523,13 +1517,12 @@
 				AB7F69AC1BFB2C8F0050A541 /* UIView+WebCacheOperation.m in Sources */,
 				AB8B38D41BFC4CCE0053A84D /* SelectTableViewCell.m in Sources */,
 				ABB1F0761C0C5DC200EADD14 /* QuestionTableViewController.m in Sources */,
-				ABF2DD5F1C0DCA970039D864 /* PressurViewController.m in Sources */,
 				AB7F69271BFB17F50050A541 /* AppDelegate.m in Sources */,
 				AB22414B1C08570E0028ACB5 /* CommondTableViewCell.m in Sources */,
 				ABDEF1301C0297C400F584C5 /* FindDocteViewController.m in Sources */,
+				AB55B8421C11B9F20050309D /* MonthSegmentViewController.m in Sources */,
 				AB85CD621C0226B6001D7368 /* UserTableViewCell.m in Sources */,
 				ABB1F0611C0C46D700EADD14 /* CustomButton.m in Sources */,
-				ABF2DD581C0DCA250039D864 /* YearViewController.m in Sources */,
 				ABE106811C0C1F4200941FB2 /* NewsViewController.m in Sources */,
 				ABB1F0921C0C608C00EADD14 /* SettingViewController.m in Sources */,
 				AB7F69241BFB17F50050A541 /* main.m in Sources */,
@@ -1539,9 +1532,9 @@
 				AB7F69A11BFB2C8F0050A541 /* SDWebImageDecoder.m in Sources */,
 				ABE3E9C81BFEFEA0007B9521 /* SearchTableViewController.m in Sources */,
 				AB7F69A91BFB2C8F0050A541 /* UIImage+WebP.m in Sources */,
-				ABF2DD561C0DCA250039D864 /* WeekViewController.m in Sources */,
 				ABB1F08E1C0C608C00EADD14 /* HealthTableViewCell.m in Sources */,
 				ABF2DD441C0DC7E60039D864 /* OtherTableViewCell.m in Sources */,
+				AB55B8431C11B9F20050309D /* WeekSegmentViewController.m in Sources */,
 				AB2691531C009BB90079ED5C /* DocterDetailViewController.m in Sources */,
 				AB7269081C095A540026785F /* ConsultViewController.m in Sources */,
 				AB7F69A41BFB2C8F0050A541 /* SDWebImageManager.m in Sources */,
@@ -1555,7 +1548,6 @@
 				AB7F699F1BFB2C8F0050A541 /* SDImageCache.m in Sources */,
 				AB85CD581C01EF9E001D7368 /* DetailTableViewCell.m in Sources */,
 				ABF2DD281C0D31DE0039D864 /* PublishCell.m in Sources */,
-				ABF2DD521C0DCA250039D864 /* DayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
